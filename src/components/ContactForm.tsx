@@ -58,7 +58,7 @@ const ContactForm = () => {
 } finally {
   setIsSubmitting(false);
 }
-
+};
   return (
     <section id="contact" className="py-24 gradient-subtle">
       <div className="container mx-auto px-4">
