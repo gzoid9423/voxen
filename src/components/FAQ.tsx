@@ -8,8 +8,8 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "Can your AI handle Singlish or local accents?",
-      answer: "Yes! Our AI is trained on Singapore English and common Singlish phrases, ensuring natural conversations with your local customers.",
+      question: "Can your AI handle Chinese or local accents?",
+      answer: "Yes! Our AI supports Mandarin Chinese and is trained on Singapore English, ensuring natural conversations with your local customers.",
     },
     {
       question: "Do I need to replace my receptionist?",

@@ -28,14 +28,10 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-3 group cursor-pointer">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shadow-soft group-hover:scale-110 transition-smooth group-hover:shadow-glow">
-              <Phone className="w-5 h-5 text-primary group-hover:text-accent transition-smooth" />
+          <div className="flex items-center gap-2">
+            <div className="text-2xl font-bold">
+              <span className="gradient-text">AVENIQ</span>
             </div>
-            <span className="text-xl font-bold tracking-tight">
-              <span className="gradient-text">VOX</span>
-              <span className="text-accent">EN</span>
-            </span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -68,7 +64,7 @@ const Navigation = () => {
           <Button
             variant="hero"
             size="lg"
-            onClick={() => scrollToSection("demo")}
+            onClick={() => scrollToSection("contact")}
             className="shadow-glow hover:shadow-glow-lg"
           >
             Book Free Demo
