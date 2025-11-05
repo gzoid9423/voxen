@@ -64,10 +64,10 @@ const Hero = () => {
               </Button>
               
               <Button
-                variant="secondary"
+                variant="outline"
                 size="xl"
                 onClick={() => setAudioModalOpen(true)}
-                className="font-semibold"
+                className="border-primary/40 hover:border-primary hover:bg-primary/10 backdrop-blur-sm font-semibold"
               >
                 <Volume2 className="w-5 h-5" />
                 Hear a Sample
