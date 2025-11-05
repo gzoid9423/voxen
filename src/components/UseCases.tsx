@@ -5,13 +5,13 @@ const UseCases = () => {
     {
       icon: Heart,
       industry: "Clinics",
-      benefit: "Reduce missed bookings by 40%",
-      description: "Handle patient inquiries and appointment scheduling 24/7",
+      benefit: "Better booking management",
+      description: "Handle appointment scheduling and inquiries 24/7",
     },
     {
       icon: Sparkles,
       industry: "Spas & Aesthetic Clinics",
-      benefit: "Premium customer experience",
+      benefit: "Never miss a booking",
       description: "Maintain your high-end brand with sophisticated call handling",
     },
     {

@@ -1,4 +1,4 @@
-import { Phone, Calendar, MessageSquare } from "lucide-react";
+import { Phone, Calendar, Shield } from "lucide-react";
 
 const ValueProposition = () => {
   const values = [
@@ -13,9 +13,9 @@ const ValueProposition = () => {
       description: "Automatically schedules appointments and syncs directly with your calendar system",
     },
     {
-      icon: MessageSquare,
-      title: "PDPA-Safe Handling",
-      description: "All customer data is encrypted and handled with full compliance to Singapore's PDPA",
+      icon: Shield,
+      title: "Secure",
+      description: "Your data is encrypted, secure, and fully controlled by you",
     },
   ];
 

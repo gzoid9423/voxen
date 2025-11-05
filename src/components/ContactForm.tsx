@@ -66,8 +66,8 @@ const ContactForm = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Let's Redefine <span className="gradient-text">Reception</span>
             </h2>
-            <p className="text-lg text-secondary">
-              Get a free live demo agent tailored for your business. See how Aveniq can transform every customer call into a seamless experience.
+            <p className="text-sm text-foreground/60 mb-8">
+              Get a free live demo agent tailored for your business and see how you could benefit.
             </p>
           </div>
 
@@ -178,15 +178,12 @@ const ContactForm = () => {
             </button>
           </form>
 
-          <div className="mt-8 text-center space-y-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="mt-8 text-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <p className="text-sm text-secondary">
               Prefer email? Reach us directly at{" "}
               <a href="mailto:hello@aveniq.sg" className="text-primary hover:text-primary/80 transition-smooth">
                 hello@aveniq.sg
               </a>
-            </p>
-            <p className="text-xs text-muted-foreground">
-              Pay-as-you-go from ~SGD 0.30–0.45 / minute. Contact us for a custom quote.
             </p>
           </div>
         </div>

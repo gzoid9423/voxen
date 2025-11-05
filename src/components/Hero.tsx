@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Volume2 } from "lucide-react";
+import { ArrowRight, Volume2, User, Settings } from "lucide-react";
 import { useState } from "react";
 import AudioPlayerModal from "./AudioPlayerModal";
 
@@ -64,10 +64,10 @@ const Hero = () => {
               </Button>
               
               <Button
-                variant="outline"
+                variant="secondary"
                 size="xl"
                 onClick={() => setAudioModalOpen(true)}
-                className="border-border hover:border-primary/50 hover:bg-card/50 font-semibold"
+                className="font-semibold"
               >
                 <Volume2 className="w-5 h-5" />
                 Hear a Sample
@@ -82,13 +82,21 @@ const Hero = () => {
               </div>
               
               <div className="group relative p-8 glass-card hover:border-primary/20 transition-smooth animate-scale-in hover:scale-[1.02]" style={{ animationDelay: "0.5s" }}>
-                <div className="text-5xl font-bold gradient-text mb-3">~2s</div>
+                <div className="text-5xl mb-3">
+                  <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-primary/20 to-primary-glow/20 flex items-center justify-center shadow-soft">
+                    <User className="w-8 h-8 text-primary" />
+                  </div>
+                </div>
                 <div className="text-lg font-semibold mb-2 text-foreground">Human Touch</div>
                 <div className="text-sm text-secondary font-light">Sounding polite, and natural — every time</div>
               </div>
               
               <div className="group relative p-8 glass-card hover:border-primary/20 transition-smooth animate-scale-in hover:scale-[1.02]" style={{ animationDelay: "0.6s" }}>
-                <div className="text-5xl font-bold gradient-text mb-3">∞</div>
+                <div className="text-5xl mb-3">
+                  <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-primary/20 to-primary-glow/20 flex items-center justify-center shadow-soft">
+                    <Settings className="w-8 h-8 text-primary" />
+                  </div>
+                </div>
                 <div className="text-lg font-semibold mb-2 text-foreground">Tailored for You</div>
                 <div className="text-sm text-secondary font-light">Personalise tone, script, and language style</div>
               </div>
