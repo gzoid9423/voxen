@@ -10,8 +10,8 @@ const Footer = () => {
               hello@aveniq.sg
             </a>
             <span className="hidden sm:block">•</span>
-            <a href="tel:+6512345678" className="hover:text-primary transition-smooth text-lg">
-              +65 1234 5678
+            <a href="tel:+6591924144" className="hover:text-primary transition-smooth text-lg">
+              +65 91924144
             </a>
           </div>
 
