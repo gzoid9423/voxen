@@ -1,7 +1,8 @@
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { X, Play, Pause } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import demoAudio from "@/assets/demo-voice.mp3";
 
 interface AudioPlayerModalProps {
   open: boolean;
@@ -11,11 +12,38 @@ interface AudioPlayerModalProps {
 
 const AudioPlayerModal = ({ open, onOpenChange, onContactClick }: AudioPlayerModalProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-    // Audio playback logic would go here
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
   };
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const handleEnded = () => setIsPlaying(false);
+    audio.addEventListener('ended', handleEnded);
+
+    return () => {
+      audio.removeEventListener('ended', handleEnded);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!open && audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      setIsPlaying(false);
+    }
+  }, [open]);
 
   const handleContactClick = () => {
     onOpenChange(false);
@@ -89,6 +117,9 @@ const AudioPlayerModal = ({ open, onOpenChange, onContactClick }: AudioPlayerMod
               </Button>
             </div>
           </div>
+
+          {/* Hidden audio element */}
+          <audio ref={audioRef} src={demoAudio} />
         </div>
       </DialogContent>
     </Dialog>
